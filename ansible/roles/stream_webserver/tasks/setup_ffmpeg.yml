@@ -9,6 +9,7 @@
     name: ffmpeg
     image: jrottenberg/ffmpeg:latest
     command: >
+      -y
       -i http://webcam.mchcares.com/mjpg/video.mjpg
       -vf fps=1
       -update 1
