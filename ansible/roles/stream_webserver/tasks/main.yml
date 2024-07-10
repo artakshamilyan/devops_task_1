@@ -1,0 +1,9 @@
+---
+- name: Include setup Docker tasks
+  include_tasks: setup_docker.yml
+
+- name: Include setup NGINX tasks
+  include_tasks: setup_nginx.yml
+
+- name: Include setup FFmpeg tasks
+  include_tasks: setup_ffmpeg.yml

@@ -1,0 +1,19 @@
+---
+- name: Create directory for storing frames
+  file:
+    path: /var/www/html
+    state: directory
+
+- name: Run FFmpeg container to capture frames
+  docker_container:
+    name: ffmpeg
+    image: jrottenberg/ffmpeg:latest
+    command: >
+      -i http://webcam.mchcares.com/mjpg/video.mjpg
+      -vf fps=1
+      -update 1
+      /var/www/html/latest.jpg
+    volumes:
+      - /var/www/html:/var/www/html
+    state: started
+    restart_policy: always
