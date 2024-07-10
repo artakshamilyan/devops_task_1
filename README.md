@@ -13,8 +13,8 @@ This project provides an Ansible playbook and role to set up a web server on a L
 
 1. Clone or extract the repository containing the app files:
    ```bash
-   git clone <repository_url>
-   cd <repository_directory>/ansible
+   git clone [<repository_url>](https://github.com/artakshamilyan/devops_task_1.git)
+   cd devops_task_1/ansible
 2. Ensure necessary dependencies are installed:
 	```bash
 	sudo apt install ansible -y
