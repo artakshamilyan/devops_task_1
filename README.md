@@ -17,8 +17,10 @@ This project provides an Ansible playbook and role to set up a web server on a L
    cd <repository_directory>/ansible
 2. Ensure necessary dependencies are installed:
 	```bash
-	Ansible: sudo apt install ansible -y
-	Docker: sudo apt install docker.io -y
+	sudo apt install ansible -y
+	sudo apt install docker.io -y
+	sudo systemctl start docker
+	sudo systemctl enable docker
 3. Run the following command to start the app:
 	```bash
 	ansible-playbook playbook.yml
